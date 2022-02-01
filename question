@@ -1,0 +1,201 @@
+#1. What is Python?
+Python is an interpreted high-level, general-purpose programming language. We can build almost any type of application using Python with third-party libraries and frameworks. Python is one of the most popular programming languages in advanced technologies like AI, Data Science, etc.
+
+#2. What is the main difference between an interpreter and a compiler?
+The interpreter translates one statement at a time into machine code, whereas the compiler translates the entire code at a time into machine code.
+#3. What are the built-in data types in Python?
+There are multiples built-in data types in Python. They are int,  float, complex, bool, list, tuple, set, dict, str.
+
+Note: You don’t have to tell all the data types present in Python. Mention some of them you mostly use. The interviewer may ask questions based on your answer.
+
+#4. What’s the difference between list and tuple?
+
+Both list and tuple are used to store the collection of objects. The main difference between the list and tuple is “the list is mutable object whereas tuple is an immutable object”.
+
+#5. What are mutable and immutable data types?
+Mutable data types can be changed after creating them. Some of the mutable objects in Python are list, set, dict.
+
+Immutable data types can’t be changed after creating them. Some of the immutable objects in Python are str, tuple.
+
+#6. Explain some methods of the list.
+1. append – the method is used to add an element to the list. It adds the element to the end of the list.
+
+>>> a = [1, 2]
+>>> a.append(3)
+>>> a
+[1, 2, 3]
+2. pop – the method is used to remove an element from the list. It will remove the last element if we don’t provide any index as an argument or remove the element at the index if we provide an argument.
+
+>>> a = [1, 2, 3, 4, 5]
+>>> a.pop()
+5
+>>> a
+[1, 2, 3, 4]
+>>> a.pop(1)
+2
+>>> a
+[1, 3, 4]
+3. remove – the method is used to remove an element from the list. We need to provide the element as an argument that we want to remove from the list. It removes the first occurrence of the element from the list.
+
+>>> a = [1, 2, 2, 3, 4]
+>>> a = [1, 2, 3, 2, 4]
+>>> a.remove(1)
+>>> a
+[2, 3, 2, 4]
+>>> a.remove(2)
+>>> a
+[3, 2, 4]
+4. sort – the method used to sort the list in ascending or descending order.
+
+>>> a = [3, 2, 4, 1]
+>>> a.sort()
+>>> a
+[1, 2, 3, 4]
+>>> a.sort(reverse=True)
+>>> a
+[4, 3, 2, 1]
+5. reverse – the method is used to reverse the list elements.
+
+>>> a = [3, 2, 4, 1]
+>>> a.reverse()
+>>> a
+[1, 4, 2, 3]
+
+#7. Explain some methods of string
+1. split – the method is used to split the string at desired points. It returns the list as a result. By default, it splits the string at spaces. We can provide the delimiter as an argument for the method.
+
+>>> a = "This is Geekflare"
+>>> a.split()
+['This', 'is', 'Geekflare']
+>>> a = "1, 2, 3, 4, 5, 6"
+>>> a.split(", ")
+['1', '2', '3', '4', '5', '6']
+2. join – the method is used to combine the list of string objects. It combines the string objects with the delimiter we provide.
+
+>>> a = ['This', 'is', 'Geekflare']
+>>> ' '.join(a)
+'This is Geekflare'
+>>> ', '.join(a)
+'This, is, Geekflare'
+Note: Some other methods of strings are: capitalize, isalnum, isalpha, isdigit, lower, upper, center, etc..,
+
+#8. What’s the negative indexing in lists?
+The index is used to access the element from the lists. Normal indexing of the list starts from 0.
+
+Similar to normal indexing, negative indexing is also used to access the elements from the lists. But, negative indexing allows us to access the index from the end of the list. The start of the negative indexing is -1. And it keeps on increasing like -2, -3, -4, etc.., till the length of the list.
+
+>>> a = [1, 2, 3, 4, 5]
+>>> a[-1]
+5
+>>> a[-3]
+3
+>>> a[-5]
+1
+#9. Explain some methods of dict
+1. items – the method returns key: value pairs of dictionaries as a list of tuples.
+
+>>> a = {1: 'Geekflare', 2: 'Geekflare Tools', 3: 'Geekflare Online Compiler'}
+>>> a.items()
+dict_items([(1, 'Geekflare'), (2, 'Geekflare Tools'), (3, 'Geekflare Online Compiler')])
+2. pop – the method is used to remove the key: value pair from the dictionary. It accepts the key as an argument and removes it from the dictionary.
+
+>>> a = {1: 2, 2: 3}
+>>> a.pop(2)
+3
+>>> a
+{1: 2}
+10. Does Python have switch statements?
+No, Python doesn’t have switch statements.
+
+#11. How do you implement the functionality of switch statements in Python?
+We can implement the functionality of switch statements using if and elif statements.
+
+>>> if a == 1:
+...     print(...)
+... elif a == 2:
+...     print(....)
+#12. What are break and continue statements?
+break – the break statement is used to terminate the running loop. The execution of the code will jump to the outside of the break loop.
+
+>>> for i in range(5):
+...     if i == 3:
+...             break
+...     print(i)
+...
+0
+1
+2
+continue – the continue statement is used to skip the execution of the remaining code. The code after the continue statement doesn’t execute in the current iteration, and the execution goes to the next iteration.
+
+>>> for i in range(5):
+...     if i == 3:
+...             continue
+...     print(i)
+...
+0
+1
+2
+4
+#13. When is the code in else executed with while and for loops?
+The code inside the else block with while and for loops is executed after executing all iterations. And the code inside the else block doesn’t execute when we break the loops.
+14. What are the parameters and arguments?
+Parameters are the names listed in the function definition.
+
+Arguments are the values passed to the function while invoking
+#14. What is the lambda function?
+Lambda functions are small anonymous functions in Python. It has single expressions and accepts multiples arguments.
+
+>>> add = lambda a, b: a + b
+>>> add(1, 3)
+4
+#15. What’s the difference between normal function and lambda function?
+The functionality of both normal functions and lambda functions are similar. But, we need to write some extra code in normal functions compared to lambda functions for the same functionality.
+
+Lambda functions come in handy when there is a single expression.
+#16. OOPs in Python
+What keyword is used to create classes in Python?
+The class keyword is used to create classes in Python. We should follow the pascal case for naming the classes in Python as an industry-standard practice.
+
+>>> class Car:
+...     pass
+...
+#17. How to instantiate a class in Python?
+We can create an instance of a class in Python by simply calling it like function. We can pass the required attributes for the object in the same way as we do for function arguments.
+
+>>> class Car:
+...     def __init__(self, color):
+...             self.color = color
+...
+>>> red_car = Car('red')
+>>> red_car.color
+'red'
+>>> green_car = Car('green')
+>>> green_car.color
+'green'
+>>>
+#18. What is self in Python?
+The self represents the object of the class. It’s used to access the object attributes and methods inside the class for the particular object.
+
+#19. What is the __init__ method?
+The __init__ is the constructor method similar to the constructors in other OOP languages. It executes immediately when we create an object for the class. It’s used to initialize the initial data for the instance.
+
+#20. What is docstring in Python?
+The documentation strings or docstrings are used to document a code block. They are also used as multi-line comments.
+
+These docstrings are used in the methods of a class to describe what a certain method does. And we can see the method docstring using the help method.
+
+>>> class Car:
+...     def __init__(self, color):
+...             self.color = color
+...
+...     def change_color(self, updated_color):
+...             """This method changes the color of the car"""
+...             self.color = updated_color
+
+ car = Car('red')
+ help(car.change_color)
+Help on method change_color in module __main__:
+
+change_color(updated_color) method of __main__.Car instance
+    This method changes the color of the car
+
